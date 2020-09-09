@@ -142,7 +142,7 @@ class AddDataActivity : AppCompatActivity() {
             uploadImage.continueWithTask { task ->
                 if (!task.isSuccessful) {
                     task.exception?.let { error ->
-                        Log.e("Gagal Upload", error.localizedMessage.toString())
+                        Log.e("Gagal Upload", error.toString())
                     }
                 }
                 fileRef.downloadUrl
